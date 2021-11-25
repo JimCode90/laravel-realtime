@@ -29,6 +29,8 @@ class UserController extends Controller
     {
         $data = $request->all();
         $data['password'] = bcrypt($request->password);
+
+
         return User::create($data);
     }
 
